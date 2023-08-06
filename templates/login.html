@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Login</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+     <link rel="stylesheet" href="{{ url_for('static', filename='login/style.css') }}">
+
+     <style>
+        form {
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(78, 184, 221);
+            color: white;
+        }
+    </style>
+</head>
+    <body>
+
+        <form action="/login" method="post">
+            <label for="correo">Correo:</label>
+            <input type="text" name="correo" required>
+            <br>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contraseña" required>
+            <br>
+            <label for="iniciar"></label>
+            <input type="submit" value="Iniciar sesión">
+            <a href="/inicio">Cancelar</a>
+
+        </form>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+        <script> src="{{url_for('static', filename='NextgenmediaSVGPlugin.min_2')}}"</script>
+        <script src="{{ url_for('static', filename='login/script.js')}}"></script>
+    
+    </body>
+    </html>
+    
